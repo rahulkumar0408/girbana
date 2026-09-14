@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIRBANA | Multi-Brand Beauty & Bulk Savings</title>
+<meta name="description" content="Shop beauty, skincare, haircare and personal-care products from leading brands at GIRBANA. Buy more and unlock 15%, 25% or 40% quantity-based savings.">
+<meta name="theme-color" content="#173b2b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">BUY MORE · SAVE MORE &nbsp; <b>15% OFF</b> 1–50 &nbsp; <b>25% OFF</b> 51–100 &nbsp; <b>40% OFF</b> 101–1000</div>
+<header id="header">
+  <div class="nav container">
+    <a href="#home" class="logo">GIRBANA<span>•</span></a>
+    <nav>
+      <a href="#shop">Shop</a><a href="#brands">Brands</a><a href="#deals">Bulk Deals</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="searchOpen" class="icon-btn" aria-label="Search">⌕</button>
+      <button id="cartOpen" class="cart-btn">Cart <span id="cartCount">0</span></button>
+      <a class="wa-mini" href="https://wa.me/919672729258?text=Hello%20GIRBANA%2C%20I%20want%20to%20know%20more%20about%20your%20products%20and%20bulk%20discounts." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+  <div id="mobileMenu"><a href="#shop">Shop</a><a href="#brands">Brands</a><a href="#deals">Bulk Deals</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="kicker">MULTI-BRAND BEAUTY · BULK SAVINGS</span>
+      <h1>Beauty you love.<br><em>Deals you feel.</em></h1>
+      <p>Shop skincare, haircare, personal care and fragrance from a growing selection of leading brands — with quantity-based savings built into every cart.</p>
+      <div class="hero-buttons"><a class="btn dark" href="#shop">Shop Products →</a><a class="btn outline" href="#deals">See Bulk Deals</a></div>
+      <div class="hero-trust"><span>✓ Multi-brand catalogue</span><span>✓ Bulk purchase support</span><span>✓ GST-registered business</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="floating-card fc1"><small>YOUR CART</small><strong>75 ITEMS</strong><span>25% OFF UNLOCKED</span></div>
+      <div class="product-stack"><div class="bottle b1">GIRBANA<br><small>BEAUTY</small></div><div class="bottle b2">SKIN<br><small>CARE</small></div><div class="bottle b3">HAIR<br><small>CARE</small></div></div>
+      <div class="save-card"><small>TOTAL SAVINGS</small><strong>₹4,500</strong><span>when you buy more</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="deal-strip" id="deals">
+ <div class="container deal-grid">
+  <div><span class="kicker">THE GIRBANA ADVANTAGE</span><h2>Buy more.<br><em>Save more.</em></h2></div>
+  <div class="deal-card"><small>01 · START SAVING</small><strong>1–50</strong><b>15% OFF</b><span>On eligible cart quantity</span></div>
+  <div class="deal-card active"><small>02 · BETTER VALUE</small><strong>51–100</strong><b>25% OFF</b><span>Unlock a higher tier</span></div>
+  <div class="deal-card hot"><small>03 · MAXIMUM SAVINGS</small><strong>101–1000</strong><b>40% OFF</b><span>Highest configured tier</span></div>
+ </div>
+</section>
+
+<section class="section" id="brands">
+ <div class="container">
+  <div class="section-title"><span class="kicker">BRANDS</span><h2>Shop your favourites.</h2><p>Explore a curated multi-brand catalogue. Brand buttons instantly filter the product grid.</p></div>
+  <div id="brandFilters" class="brand-pills"></div>
+ </div>
+</section>
+
+<section class="section products-section" id="shop">
+ <div class="container">
+  <div class="shop-head">
+   <div><span class="kicker">CATALOGUE</span><h2>Explore products.</h2></div>
+   <div class="shop-tools"><div class="search-box"><span>⌕</span><input id="searchInput" placeholder="Search product, brand or SKU"></div><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: Low → High</option><option value="high">Price: High → Low</option><option value="discount">Highest Discount</option><option value="name">Name A → Z</option></select></div>
+  </div>
+  <div class="filter-row">
+    <button class="filter active" data-cat="All">All</button><button class="filter" data-cat="Skincare">Skincare</button><button class="filter" data-cat="Suncare">Suncare</button><button class="filter" data-cat="Serum">Serums</button><button class="filter" data-cat="Haircare">Haircare</button><button class="filter" data-cat="Body Care">Body Care</button><button class="filter" data-cat="Personal Care">Personal Care</button>
+  </div>
+  <div id="productGrid" class="product-grid"></div>
+  <div id="emptyState" class="empty" hidden>No products match your search.</div>
+ </div>
+</section>
+
+<section class="calculator section">
+ <div class="container calc-grid">
+  <div><span class="kicker">LIVE BULK CALCULATOR</span><h2>See your savings<br><em>before you buy.</em></h2><p>Change the quantity to see the configured GIRBANA discount tier. The same rule powers the cart.</p></div>
+  <div class="calc-card">
+   <label>Quantity <output id="qtyOut">1</output></label>
+   <input id="qtySlider" type="range" min="1" max="1000" value="1">
+   <div class="range-labels"><span>1</span><span>50</span><span>100</span><span>1000</span></div>
+   <div class="calc-result"><span>Applicable discount</span><strong id="calcPct">15%</strong><span>Example cart value</span><b id="calcValue">₹1,000</b><span>Estimated savings</span><b class="green" id="calcSave">₹150</b></div>
+   <div id="calcMessage" class="calc-message">Add 49 more units to reach the 51–100 tier.</div>
+  </div>
+ </div>
+</section>
+
+<section class="section why" id="why">
+ <div class="container">
+  <div class="section-title center"><span class="kicker">WHY GIRBANA</span><h2>Made for smart buying.</h2></div>
+  <div class="why-grid"><article><b>01</b><h3>Multi-brand selection</h3><p>Discover skincare, haircare, body care and fragrance across multiple brands.</p></article><article><b>02</b><h3>Quantity-based savings</h3><p>Your cart automatically moves into the applicable 15%, 25% or 40% tier.</p></article><article><b>03</b><h3>Easy ordering</h3><p>Browse online, build a cart and send the order through WhatsApp or email.</p></article><article><b>04</b><h3>Bulk support</h3><p>Need a larger requirement? Send a bulk quote request directly to GIRBANA.</p></article></div>
+ </div>
+</section>
+
+<section class="bulk-cta">
+ <div class="container bulk-inner"><div><span class="kicker">FOR LARGER REQUIREMENTS</span><h2>Need a bulk quote?</h2><p>Tell us the products and estimated quantity. We’ll help you with the next step.</p></div><button class="btn light" id="quoteOpen">Request Bulk Quote →</button></div>
+</section>
+
+<section class="section about">
+ <div class="container about-grid"><div><span class="kicker">ABOUT GIRBANA</span><h2>Beauty. Care.<br><em>Value.</em></h2></div><div><p>GIRBANA is a multi-brand beauty, skincare, personal-care and lifestyle product seller/dealer. The catalogue is designed to make discovery and larger-quantity purchasing simple, with a transparent quantity-based savings model.</p><p class="muted">Product prices and availability can change. Product information shown in this demo is sourced from current public brand/retailer pages and should be re-verified before commercial launch.</p></div></div>
+</section>
+
+<section class="section faq">
+ <div class="container"><div class="section-title center"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div><div id="faqList"></div></div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container contact-grid">
+  <div><span class="kicker">CONTACT GIRBANA</span><h2>Let's connect.</h2><p>For product questions, bulk orders and enquiries, reach us directly.</p><div class="contact-details"><a href="https://wa.me/919672729258" target="_blank">WhatsApp <b>+91 9672729258</b></a><a href="mailto:deep.acharya71437@gmail.com">Email <b>deep.acharya71437@gmail.com</b></a><span>Location <b>Udaipur, Rajasthan, India</b></span></div></div>
+  <form id="contactForm" class="contact-form"><input name="name" required placeholder="Full name"><input name="email" type="email" required placeholder="Email"><input name="phone" placeholder="Phone"><textarea name="message" rows="5" placeholder="How can we help?"></textarea><button class="btn dark" type="submit">Send Enquiry →</button><p id="contactStatus"></p></form>
+ </div>
+</section>
+</main>
+
+<footer><div class="container foot"><div><a class="logo" href="#home">GIRBANA<span>•</span></a><p>Beauty · Care · Value</p></div><div class="foot-links"><a href="#shop">Shop</a><a href="#brands">Brands</a><a href="#deals">Bulk Deals</a><a href="#contact">Contact</a><button onclick="openPolicy('privacy')">Privacy Policy</button><button onclick="openPolicy('terms')">Terms &amp; Conditions</button><button onclick="openPolicy('returns')">Return &amp; Refund</button><button onclick="openPolicy('shipping')">Shipping Policy</button><button onclick="openPolicy('cancellation')">Cancellation</button></div><div class="foot-contact"><b>GSTIN</b><span>08BYVPA9403R2ZJ</span><b>Support</b><a href="mailto:deep.acharya71437@gmail.com">deep.acharya71437@gmail.com</a></div></div><div class="container copyright">© 2026 GIRBANA · Deepak Acharya · All rights reserved.</div></footer>
+
+<div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-card"><button class="modal-close">×</button><div id="modalContent"></div></div></div><div id="policyModal" class="modal" aria-hidden="true"><div id="policyBackdrop" class="modal-backdrop"></div><div class="modal-card policy-card"><button id="policyClose" class="modal-close">×</button><span class="kicker">GIRBANA INFORMATION</span><h2 id="policyTitle">Policy</h2><div id="policyBody" class="policy-body"></div></div></div>
+<aside id="cartDrawer" class="drawer"><div class="drawer-head"><h3>Your Cart</h3><button id="cartClose">×</button></div><div id="cartItems"></div><div id="cartSummary"></div></aside><div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+<div id="quoteModal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-card quote"><button class="modal-close">×</button><span class="kicker">BULK QUOTE</span><h2>Request a bulk deal.</h2><form id="quoteForm"><input name="name" required placeholder="Name"><input name="business" placeholder="Business name"><input name="phone" required placeholder="Phone"><input name="email" type="email" placeholder="Email"><input name="products" placeholder="Products required"><input name="quantity" type="number" min="1" placeholder="Estimated quantity"><textarea name="message" rows="4" placeholder="Tell us what you need"></textarea><button class="btn dark" type="submit">Send via WhatsApp →</button></form></div></div>
+
+<a class="floating-wa" href="https://wa.me/919672729258?text=Hello%20GIRBANA%2C%20I%20need%20help%20with%20products%20and%20bulk%20pricing." target="_blank" rel="noopener">◉</a>
+<script src="app.js"></script>
+</body>
+</html>
